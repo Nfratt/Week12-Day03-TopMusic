@@ -12,7 +12,7 @@
   * raw popularity score, entire world:  `raw_total`
   * raw popularity score, USA:  `raw_usa`
   * raw popularity score, UK: `raw_uk`
-  * raw popularity score, Europe (i.e., non-English speaking countries in Europe): `raw-eur`
+  * raw popularity score, Europe (i.e., non-English speaking countries in Europe): `raw_eur`
   * raw popularity score, rest of the world: `raw_row`
 
 * All columns can be `NULL`, except `id`
@@ -34,7 +34,7 @@
     * Bonus:  add more options here to find top 10 by region
   * A query which searches for a specific song in the top 5000 and returns the data for it
 
-* HINT: There are some MySQL queries which could make some of these tasks even easier to accomplish. Feel free to look at MySQL's documentation to find some of them.
+* HINT: There are some MySQL queries which could make some of these tasks even easier to accomplish. Feel free to look at MySQL's documenPtation to find some of them.
 
 
 ## Step 3: Time permitting, return search results that include album info
