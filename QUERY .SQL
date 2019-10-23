@@ -16,4 +16,13 @@ CREATE TABLE songs(
 
 );
 SELECT * from songs 
-WHERE year = '2010'
+ WHERE year = '2004';
+ 
+Select song from songs
+ where artist='Lady GaGa';
+ 
+
+ select * from songs
+ where raw_total ='35';
+ 
+ 
