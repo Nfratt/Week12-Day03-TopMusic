@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 /**
  * @see {@link https://www.npmjs.com/package/mysql}
@@ -47,7 +48,7 @@ function command(userSelect) {
  * Reads all products from the DB
  */
 function readSong() {
-  console.log('Selecting all songs by artist...\n');
+  console.log('Selecting all songs by artist... ');
   connection.query('SELECT song, year FROM songs WHERE ? ORDER BY year DESC',
       [
         {
@@ -62,7 +63,7 @@ function readSong() {
       });
 }
 function topArtists() {
-  console.log('Selecting all top artists..\n');
+  console.log('Selecting all top artists.. ');
   connection.query('SELECT artist, count(*) as Count FROM songs GROUP BY artist HAVING count(*)>1 ORDER BY Count DESC',
       function(err, res) {
         if (err) throw err;
@@ -72,7 +73,8 @@ function topArtists() {
       });
 }
 function topTen() {
-  console.log('Selecting top ten artists..\n');
+  console.log('Selecting top ten artists.. ');
+  // eslint-disable-next-line max-len
   connection.query('SELECT song, artist, raw_total as Rating, year FROM songs ORDER BY Rating desc LIMIT 10',
       function(err, res) {
         if (err) throw err;
@@ -83,7 +85,7 @@ function topTen() {
 }
 // eslint-disable-next-line require-jsdoc
 function songData() {
-  console.log('Selecting song data..\n');
+  console.log('Selecting song data.. ');
   connection.query('SELECT * FROM songs WHERE ?',
       [
         {
